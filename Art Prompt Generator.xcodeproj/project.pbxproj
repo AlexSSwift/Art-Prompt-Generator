@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58D7218D235138E2004965E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7218C235138E2004965E3 /* AppDelegate.swift */; };
+		58D7218F235138E2004965E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7218E235138E2004965E3 /* SceneDelegate.swift */; };
+		58D72191235138E2004965E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D72190235138E2004965E3 /* ViewController.swift */; };
+		58D72194235138E2004965E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D72192235138E2004965E3 /* Main.storyboard */; };
+		58D72196235138E2004965E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D72195235138E2004965E3 /* Assets.xcassets */; };
+		58D72199235138E2004965E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D72197235138E2004965E3 /* LaunchScreen.storyboard */; };
+		58D721A4235138E3004965E3 /* Art_Prompt_GeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D721A3235138E3004965E3 /* Art_Prompt_GeneratorTests.swift */; };
+		58D721AF235138E3004965E3 /* Art_Prompt_GeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D721AE235138E3004965E3 /* Art_Prompt_GeneratorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58D721A0235138E3004965E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58D72181235138E2004965E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58D72188235138E2004965E3;
+			remoteInfo = "Art Prompt Generator";
+		};
+		58D721AB235138E3004965E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58D72181235138E2004965E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58D72188235138E2004965E3;
+			remoteInfo = "Art Prompt Generator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		58D72189235138E2004965E3 /* Art Prompt Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Prompt Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D7218C235138E2004965E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		58D7218E235138E2004965E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		58D72190235138E2004965E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58D72193235138E2004965E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		58D72195235138E2004965E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58D72198235138E2004965E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		58D7219A235138E2004965E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D7219F235138E3004965E3 /* Art Prompt GeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Art Prompt GeneratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D721A3235138E3004965E3 /* Art_Prompt_GeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art_Prompt_GeneratorTests.swift; sourceTree = "<group>"; };
+		58D721A5235138E3004965E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D721AA235138E3004965E3 /* Art Prompt GeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Art Prompt GeneratorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D721AE235138E3004965E3 /* Art_Prompt_GeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art_Prompt_GeneratorUITests.swift; sourceTree = "<group>"; };
+		58D721B0235138E3004965E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58D72186235138E2004965E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D7219C235138E3004965E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D721A7235138E3004965E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58D72180235138E2004965E3 = {
+			isa = PBXGroup;
+			children = (
+				58D7218B235138E2004965E3 /* Art Prompt Generator */,
+				58D721A2235138E3004965E3 /* Art Prompt GeneratorTests */,
+				58D721AD235138E3004965E3 /* Art Prompt GeneratorUITests */,
+				58D7218A235138E2004965E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58D7218A235138E2004965E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58D72189235138E2004965E3 /* Art Prompt Generator.app */,
+				58D7219F235138E3004965E3 /* Art Prompt GeneratorTests.xctest */,
+				58D721AA235138E3004965E3 /* Art Prompt GeneratorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58D7218B235138E2004965E3 /* Art Prompt Generator */ = {
+			isa = PBXGroup;
+			children = (
+				58D7218C235138E2004965E3 /* AppDelegate.swift */,
+				58D7218E235138E2004965E3 /* SceneDelegate.swift */,
+				58D72190235138E2004965E3 /* ViewController.swift */,
+				58D72192235138E2004965E3 /* Main.storyboard */,
+				58D72195235138E2004965E3 /* Assets.xcassets */,
+				58D72197235138E2004965E3 /* LaunchScreen.storyboard */,
+				58D7219A235138E2004965E3 /* Info.plist */,
+			);
+			path = "Art Prompt Generator";
+			sourceTree = "<group>";
+		};
+		58D721A2235138E3004965E3 /* Art Prompt GeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				58D721A3235138E3004965E3 /* Art_Prompt_GeneratorTests.swift */,
+				58D721A5235138E3004965E3 /* Info.plist */,
+			);
+			path = "Art Prompt GeneratorTests";
+			sourceTree = "<group>";
+		};
+		58D721AD235138E3004965E3 /* Art Prompt GeneratorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				58D721AE235138E3004965E3 /* Art_Prompt_GeneratorUITests.swift */,
+				58D721B0235138E3004965E3 /* Info.plist */,
+			);
+			path = "Art Prompt GeneratorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58D72188235138E2004965E3 /* Art Prompt Generator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58D721B3235138E3004965E3 /* Build configuration list for PBXNativeTarget "Art Prompt Generator" */;
+			buildPhases = (
+				58D72185235138E2004965E3 /* Sources */,
+				58D72186235138E2004965E3 /* Frameworks */,
+				58D72187235138E2004965E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Art Prompt Generator";
+			productName = "Art Prompt Generator";
+			productReference = 58D72189235138E2004965E3 /* Art Prompt Generator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58D7219E235138E3004965E3 /* Art Prompt GeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58D721B6235138E3004965E3 /* Build configuration list for PBXNativeTarget "Art Prompt GeneratorTests" */;
+			buildPhases = (
+				58D7219B235138E3004965E3 /* Sources */,
+				58D7219C235138E3004965E3 /* Frameworks */,
+				58D7219D235138E3004965E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58D721A1235138E3004965E3 /* PBXTargetDependency */,
+			);
+			name = "Art Prompt GeneratorTests";
+			productName = "Art Prompt GeneratorTests";
+			productReference = 58D7219F235138E3004965E3 /* Art Prompt GeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		58D721A9235138E3004965E3 /* Art Prompt GeneratorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58D721B9235138E3004965E3 /* Build configuration list for PBXNativeTarget "Art Prompt GeneratorUITests" */;
+			buildPhases = (
+				58D721A6235138E3004965E3 /* Sources */,
+				58D721A7235138E3004965E3 /* Frameworks */,
+				58D721A8235138E3004965E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58D721AC235138E3004965E3 /* PBXTargetDependency */,
+			);
+			name = "Art Prompt GeneratorUITests";
+			productName = "Art Prompt GeneratorUITests";
+			productReference = 58D721AA235138E3004965E3 /* Art Prompt GeneratorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58D72181235138E2004965E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Alexander Smith";
+				TargetAttributes = {
+					58D72188235138E2004965E3 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					58D7219E235138E3004965E3 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 58D72188235138E2004965E3;
+					};
+					58D721A9235138E3004965E3 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 58D72188235138E2004965E3;
+					};
+				};
+			};
+			buildConfigurationList = 58D72184235138E2004965E3 /* Build configuration list for PBXProject "Art Prompt Generator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58D72180235138E2004965E3;
+			productRefGroup = 58D7218A235138E2004965E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58D72188235138E2004965E3 /* Art Prompt Generator */,
+				58D7219E235138E3004965E3 /* Art Prompt GeneratorTests */,
+				58D721A9235138E3004965E3 /* Art Prompt GeneratorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58D72187235138E2004965E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D72199235138E2004965E3 /* LaunchScreen.storyboard in Resources */,
+				58D72196235138E2004965E3 /* Assets.xcassets in Resources */,
+				58D72194235138E2004965E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D7219D235138E3004965E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D721A8235138E3004965E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58D72185235138E2004965E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D72191235138E2004965E3 /* ViewController.swift in Sources */,
+				58D7218D235138E2004965E3 /* AppDelegate.swift in Sources */,
+				58D7218F235138E2004965E3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D7219B235138E3004965E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D721A4235138E3004965E3 /* Art_Prompt_GeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D721A6235138E3004965E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D721AF235138E3004965E3 /* Art_Prompt_GeneratorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58D721A1235138E3004965E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58D72188235138E2004965E3 /* Art Prompt Generator */;
+			targetProxy = 58D721A0235138E3004965E3 /* PBXContainerItemProxy */;
+		};
+		58D721AC235138E3004965E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58D72188235138E2004965E3 /* Art Prompt Generator */;
+			targetProxy = 58D721AB235138E3004965E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		58D72192235138E2004965E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58D72193235138E2004965E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		58D72197235138E2004965E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58D72198235138E2004965E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58D721B1235138E3004965E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		58D721B2235138E3004965E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58D721B4235138E3004965E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U3KXRCRTK;
+				INFOPLIST_FILE = "Art Prompt Generator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexSSwift.Art-Prompt-Generator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58D721B5235138E3004965E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U3KXRCRTK;
+				INFOPLIST_FILE = "Art Prompt Generator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexSSwift.Art-Prompt-Generator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		58D721B7235138E3004965E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U3KXRCRTK;
+				INFOPLIST_FILE = "Art Prompt GeneratorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexSSwift.Art-Prompt-GeneratorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Art Prompt Generator.app/Art Prompt Generator";
+			};
+			name = Debug;
+		};
+		58D721B8235138E3004965E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U3KXRCRTK;
+				INFOPLIST_FILE = "Art Prompt GeneratorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexSSwift.Art-Prompt-GeneratorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Art Prompt Generator.app/Art Prompt Generator";
+			};
+			name = Release;
+		};
+		58D721BA235138E3004965E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U3KXRCRTK;
+				INFOPLIST_FILE = "Art Prompt GeneratorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexSSwift.Art-Prompt-GeneratorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Art Prompt Generator";
+			};
+			name = Debug;
+		};
+		58D721BB235138E3004965E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U3KXRCRTK;
+				INFOPLIST_FILE = "Art Prompt GeneratorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexSSwift.Art-Prompt-GeneratorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Art Prompt Generator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58D72184235138E2004965E3 /* Build configuration list for PBXProject "Art Prompt Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D721B1235138E3004965E3 /* Debug */,
+				58D721B2235138E3004965E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58D721B3235138E3004965E3 /* Build configuration list for PBXNativeTarget "Art Prompt Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D721B4235138E3004965E3 /* Debug */,
+				58D721B5235138E3004965E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58D721B6235138E3004965E3 /* Build configuration list for PBXNativeTarget "Art Prompt GeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D721B7235138E3004965E3 /* Debug */,
+				58D721B8235138E3004965E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58D721B9235138E3004965E3 /* Build configuration list for PBXNativeTarget "Art Prompt GeneratorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D721BA235138E3004965E3 /* Debug */,
+				58D721BB235138E3004965E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58D72181235138E2004965E3 /* Project object */;
+}
