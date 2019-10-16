@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		58D7218D235138E2004965E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7218C235138E2004965E3 /* AppDelegate.swift */; };
 		58D7218F235138E2004965E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7218E235138E2004965E3 /* SceneDelegate.swift */; };
-		58D72191235138E2004965E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D72190235138E2004965E3 /* ViewController.swift */; };
+		58D72191235138E2004965E3 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D72190235138E2004965E3 /* MainMenuVC.swift */; };
 		58D72194235138E2004965E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D72192235138E2004965E3 /* Main.storyboard */; };
 		58D72196235138E2004965E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D72195235138E2004965E3 /* Assets.xcassets */; };
 		58D72199235138E2004965E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D72197235138E2004965E3 /* LaunchScreen.storyboard */; };
 		58D721A4235138E3004965E3 /* Art_Prompt_GeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D721A3235138E3004965E3 /* Art_Prompt_GeneratorTests.swift */; };
 		58D721AF235138E3004965E3 /* Art_Prompt_GeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D721AE235138E3004965E3 /* Art_Prompt_GeneratorUITests.swift */; };
+		58D721BD23513969004965E3 /* CreatPrompt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D721BC23513969004965E3 /* CreatPrompt.storyboard */; };
+		58D721C223513B80004965E3 /* NewPromptDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D721C123513B80004965E3 /* NewPromptDataVC.swift */; };
+		58D721C423513B9A004965E3 /* NewPromptTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D721C323513B9A004965E3 /* NewPromptTypeVC.swift */; };
+		58D721C623513C3F004965E3 /* PromptData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D721C523513C3F004965E3 /* PromptData.swift */; };
+		58D721C823513E6D004965E3 /* GeneratedPromptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D721C723513E6D004965E3 /* GeneratedPromptVC.swift */; };
+		58D721D023514A7C004965E3 /* SelectPromptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D721CF23514A7C004965E3 /* SelectPromptVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,7 @@
 		58D72189235138E2004965E3 /* Art Prompt Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Prompt Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D7218C235138E2004965E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58D7218E235138E2004965E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58D72190235138E2004965E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58D72190235138E2004965E3 /* MainMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
 		58D72193235138E2004965E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58D72195235138E2004965E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58D72198235138E2004965E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		58D721AA235138E3004965E3 /* Art Prompt GeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Art Prompt GeneratorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D721AE235138E3004965E3 /* Art_Prompt_GeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art_Prompt_GeneratorUITests.swift; sourceTree = "<group>"; };
 		58D721B0235138E3004965E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D721BC23513969004965E3 /* CreatPrompt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatPrompt.storyboard; sourceTree = "<group>"; };
+		58D721C123513B80004965E3 /* NewPromptDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPromptDataVC.swift; sourceTree = "<group>"; };
+		58D721C323513B9A004965E3 /* NewPromptTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPromptTypeVC.swift; sourceTree = "<group>"; };
+		58D721C523513C3F004965E3 /* PromptData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptData.swift; sourceTree = "<group>"; };
+		58D721C723513E6D004965E3 /* GeneratedPromptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPromptVC.swift; sourceTree = "<group>"; };
+		58D721CF23514A7C004965E3 /* SelectPromptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPromptVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +113,13 @@
 			children = (
 				58D7218C235138E2004965E3 /* AppDelegate.swift */,
 				58D7218E235138E2004965E3 /* SceneDelegate.swift */,
-				58D72190235138E2004965E3 /* ViewController.swift */,
-				58D72192235138E2004965E3 /* Main.storyboard */,
+				58D72190235138E2004965E3 /* MainMenuVC.swift */,
+				58D721CF23514A7C004965E3 /* SelectPromptVC.swift */,
+				58D721C723513E6D004965E3 /* GeneratedPromptVC.swift */,
+				58D721C123513B80004965E3 /* NewPromptDataVC.swift */,
+				58D721C323513B9A004965E3 /* NewPromptTypeVC.swift */,
+				58D721C523513C3F004965E3 /* PromptData.swift */,
+				58D721BE2351397E004965E3 /* Stortyboards */,
 				58D72195235138E2004965E3 /* Assets.xcassets */,
 				58D72197235138E2004965E3 /* LaunchScreen.storyboard */,
 				58D7219A235138E2004965E3 /* Info.plist */,
@@ -126,6 +143,15 @@
 				58D721B0235138E3004965E3 /* Info.plist */,
 			);
 			path = "Art Prompt GeneratorUITests";
+			sourceTree = "<group>";
+		};
+		58D721BE2351397E004965E3 /* Stortyboards */ = {
+			isa = PBXGroup;
+			children = (
+				58D72192235138E2004965E3 /* Main.storyboard */,
+				58D721BC23513969004965E3 /* CreatPrompt.storyboard */,
+			);
+			path = Stortyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +260,7 @@
 			files = (
 				58D72199235138E2004965E3 /* LaunchScreen.storyboard in Resources */,
 				58D72196235138E2004965E3 /* Assets.xcassets in Resources */,
+				58D721BD23513969004965E3 /* CreatPrompt.storyboard in Resources */,
 				58D72194235138E2004965E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58D72191235138E2004965E3 /* ViewController.swift in Sources */,
+				58D721C223513B80004965E3 /* NewPromptDataVC.swift in Sources */,
+				58D721C623513C3F004965E3 /* PromptData.swift in Sources */,
+				58D72191235138E2004965E3 /* MainMenuVC.swift in Sources */,
+				58D721D023514A7C004965E3 /* SelectPromptVC.swift in Sources */,
 				58D7218D235138E2004965E3 /* AppDelegate.swift in Sources */,
 				58D7218F235138E2004965E3 /* SceneDelegate.swift in Sources */,
+				58D721C823513E6D004965E3 /* GeneratedPromptVC.swift in Sources */,
+				58D721C423513B9A004965E3 /* NewPromptTypeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
