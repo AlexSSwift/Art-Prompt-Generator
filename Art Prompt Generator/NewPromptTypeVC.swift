@@ -11,12 +11,42 @@ import UIKit
 class NewPromptTypeVC: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var vcLabel: UILabel!
+    
     var newTypeClosure: (String) -> Void = {_ in}
-  
+    var task:vcJob = .newCategory
+    var stringToEdit:String = ""
+    
+    enum vcJob {case newCategory; case editPrompt; case editCategory}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        setup()
+    }
+    
+    func setup() {
+        switch task {
+        case .newCategory:
+            setupForNewCategory()
+        case .editCategory:
+            setuoForEditingCategory()
+        case .editPrompt:
+            setupForEditingPrompt()
+        }
+    }
+    
+    func setupForNewCategory() {
+        vcLabel.text = "New Category"
+    }
+    
+    func setuoForEditingCategory() {
+        vcLabel.text = "Edit Category"
+        textField.text = stringToEdit
+    }
+    
+    func setupForEditingPrompt() {
+        vcLabel.text = "Edit Prompt"
+        textField.text = stringToEdit
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {

@@ -15,8 +15,8 @@ class NewPromptDataVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var promptTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    var currentCatagory: Int = 0
-    var prompts: [String] = []
+    var currentCatagory: Int      = 0
+    var prompts: [String]         = []
     var promptClosure: () -> Void = {}
     
     override func viewDidLoad() {
@@ -60,33 +60,65 @@ class NewPromptDataVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        tableView.beginUpdates()
+        prompts.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .none)
+        tableView.endUpdates()
+    }
     
     @IBAction func canelButtonPressed(_ sender: UIButton) {
         promptClosure()
         self.dismiss(animated: true, completion: nil)
     }
     
-  
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        promptData.setOrAppendData(which: currentCatagory, prompts: prompts)
-        promptClosure()
-        self.dismiss(animated: true, completion: nil)
+        if promptData.categories.isEmpty == false {
+            promptData.setOrAppendData(which: currentCatagory, prompts: prompts)
+            promptData.sortAlphabetically()
+            promptClosure()
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "You must have at least one category selected", preferredStyle: .alert)
+            
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(ok)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func newCatigoryButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "CreatPrompt", bundle: nil)
         let newPromptTypeVC = storyboard.instantiateViewController(withIdentifier: "NewPromptTypeVC") as! NewPromptTypeVC
         //newPromptTypeVC.modalPresentationStyle = .fullScreen
+        newPromptTypeVC.task = .newCategory
         
         self.present(newPromptTypeVC, animated: true, completion: nil)
         
         newPromptTypeVC.newTypeClosure = {
-            promptData.categories.append($0)
-            promptData.categoriesOpened[$0] = false
+            promptData.categories.insert($0, at: 0)
             promptData.data[$0] = []
             self.typePicker.reloadAllComponents()
         }
     }
+    
+    @IBAction func editCategoryButtonPressed(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "CreatPrompt", bundle: nil)
+        let newPromptTypeVC = storyboard.instantiateViewController(withIdentifier: "NewPromptTypeVC") as! NewPromptTypeVC
+        //newPromptTypeVC.modalPresentationStyle = .fullScreen
+        newPromptTypeVC.task = .editCategory
+        newPromptTypeVC.stringToEdit = promptData.categories[currentCatagory]
+        
+        self.present(newPromptTypeVC, animated: true, completion: nil)
+        
+        newPromptTypeVC.newTypeClosure = {
+            promptData.editDataCategory(which: self.currentCatagory, newCategoryName: $0)
+            self.typePicker.reloadAllComponents()
+        }
+        
+    }
+    
     
     @IBAction func deleteCategoryPressed(_ sender: UIButton) {
         let deleteAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this category and it's contents?", preferredStyle: .alert)
@@ -113,8 +145,9 @@ class NewPromptDataVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
                 if prompts.contains(capitalized) {
                     // do nothing
                 } else {
-                    prompts.append(capitalized)
-                    let indexPath = IndexPath(row: prompts.count - 1, section: 0)
+                    prompts.insert(capitalized, at: 0)
+                    promptTextField.text = ""
+                    let indexPath = IndexPath(row: 0, section: 0)
                                tableView.beginUpdates()
                                tableView.insertRows(at: [indexPath], with: .none)
                                tableView.endUpdates()

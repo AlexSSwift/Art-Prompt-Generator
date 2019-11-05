@@ -17,7 +17,7 @@ class PromptData {
     
     let storedDataKey: String = "storedData"
     var categories: [String] = []
-    var categoriesOpened: [String:Bool] = [:]
+    //var categoriesOpened: [String:Bool] = [:]
     //type name for key, character: [knight, wizard, cleric]
     var data:  [String:[String]] = [:]
  
@@ -46,6 +46,7 @@ class PromptData {
     
     func storeData() -> [Any] { 
       var buffer:[Any] = []
+        let categoriesOpened:[String] = []
         
         buffer.append(categories)
         buffer.append(categoriesOpened)
@@ -56,11 +57,39 @@ class PromptData {
     
     func retrieveStoredData() {
         guard let guardedRetrievedData = UserDefaults.standard.array(forKey: self.storedDataKey) else {
-                return
+            print("Error: we could not retrieve the data.")
+            return
             }
         categories       = guardedRetrievedData[0] as! [String]
-        categoriesOpened = guardedRetrievedData[1] as! [String:Bool]
+       // categoriesOpened = guardedRetrievedData[1] as! [String:Bool]
         data             = guardedRetrievedData[2] as! [String:[String]]
+        
+        sortAlphabetically()
     }
+    
+    func sortAlphabetically() {
+        let sortedArray = categories.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+        categories = sortedArray
+        
+        for category in categories {
+            if let guardedData = data[category] {
+                let sortedArray = guardedData.sorted { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+                data[category] = sortedArray
+            }
+        }
+    }
+    
+    func editDataCategory(which category: Int, newCategoryName: String) {
+        var buffer: [String]
+        let thisCategory = categories[category]
+        if data[thisCategory] != nil {
+            buffer = data[thisCategory]!
+            data.removeValue(forKey: thisCategory)
+            categories.remove(at: category)
+            categories.append(newCategoryName)
+            data[newCategoryName] = buffer
+        }
+    }
+    
     
 }

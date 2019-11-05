@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L5r-b0-JsX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L5r-b0-JsX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,13 +24,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffs-Zc-uRQ">
-                                <rect key="frame" x="41.5" y="124" width="241" height="129"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="129" id="rhg-EK-eEB"/>
-                                    <constraint firstAttribute="width" constant="241" id="zbj-ys-Fio"/>
-                                </constraints>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catigory Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1K-HN-7cH">
                                 <rect key="frame" x="124.5" y="84" width="165" height="32"/>
                                 <constraints>
@@ -41,15 +34,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Prompt Idea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAP-Fr-Zfg">
-                                <rect key="frame" x="0.0" y="253" width="414" height="32"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffs-Zc-uRQ">
+                                <rect key="frame" x="41.5" y="124" width="241" height="129"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="WPb-T1-ZWn"/>
+                                    <constraint firstAttribute="height" constant="129" id="rhg-EK-eEB"/>
+                                    <constraint firstAttribute="width" constant="241" id="zbj-ys-Fio"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxF-65-q6W">
                                 <rect key="frame" x="20" y="84" width="61" height="30"/>
                                 <constraints>
@@ -89,14 +80,40 @@
                                     <action selector="newCatigoryButtonPressed:" destination="L5r-b0-JsX" eventType="touchUpInside" id="pbT-Ji-L9F"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gd-Yq-J23">
-                                <rect key="frame" x="20" y="293" width="324" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIH-1v-70O">
+                                <rect key="frame" x="290.5" y="186" width="107" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="igo-Bd-4p1"/>
+                                    <constraint firstAttribute="width" constant="107" id="Gpe-OX-xxA"/>
+                                    <constraint firstAttribute="height" constant="30" id="Nk8-gB-Pxl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title="Edit Catigory">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="editCategoryButtonPressed:" destination="L5r-b0-JsX" eventType="touchUpInside" id="quT-Rm-fYF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fD-vR-qNA">
+                                <rect key="frame" x="289" y="223" width="107" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pW1-Rs-Cdj"/>
+                                    <constraint firstAttribute="width" constant="107" id="uqE-L7-01p"/>
+                                </constraints>
+                                <state key="normal" title="Delete Catigory"/>
+                                <connections>
+                                    <action selector="deleteCategoryPressed:" destination="L5r-b0-JsX" eventType="touchUpInside" id="G8r-kc-Ozl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Prompt Idea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAP-Fr-Zfg">
+                                <rect key="frame" x="0.0" y="253" width="414" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="WPb-T1-ZWn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rip-jx-xaM">
                                 <rect key="frame" x="364" y="293" width="30" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,40 +128,42 @@
                                     <action selector="okButtonPressed:" destination="L5r-b0-JsX" eventType="touchUpInside" id="IrZ-cV-ZFJ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gd-Yq-J23">
+                                <rect key="frame" x="20" y="293" width="324" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="igo-Bd-4p1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6bD-Iz-FaV">
                                 <rect key="frame" x="20" y="344" width="374" height="527"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fD-vR-qNA">
-                                <rect key="frame" x="290.5" y="194" width="107" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="pW1-Rs-Cdj"/>
-                                    <constraint firstAttribute="width" constant="107" id="uqE-L7-01p"/>
-                                </constraints>
-                                <state key="normal" title="Delete Catigory"/>
-                                <connections>
-                                    <action selector="deleteCategoryPressed:" destination="L5r-b0-JsX" eventType="touchUpInside" id="G8r-kc-Ozl"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="IAP-Fr-Zfg" firstAttribute="leading" secondItem="sMK-vd-ODN" secondAttribute="leading" id="4Gk-ED-c5N"/>
                             <constraint firstItem="sMK-vd-ODN" firstAttribute="trailing" secondItem="qHT-4m-2xo" secondAttribute="trailing" constant="20" id="7hN-Ku-sUW"/>
                             <constraint firstItem="rip-jx-xaM" firstAttribute="leading" secondItem="9gd-Yq-J23" secondAttribute="trailing" constant="20" id="8aJ-1D-tQo"/>
+                            <constraint firstItem="sMK-vd-ODN" firstAttribute="trailing" secondItem="8fD-vR-qNA" secondAttribute="trailing" constant="16.5" id="8la-Ov-ZwO"/>
+                            <constraint firstItem="8fD-vR-qNA" firstAttribute="top" secondItem="PIH-1v-70O" secondAttribute="bottom" constant="8" id="90l-pI-YWV"/>
                             <constraint firstItem="6bD-Iz-FaV" firstAttribute="leading" secondItem="sMK-vd-ODN" secondAttribute="leading" constant="20" id="9aQ-qV-qqc"/>
+                            <constraint firstItem="ffs-Zc-uRQ" firstAttribute="leading" secondItem="sMK-vd-ODN" secondAttribute="leading" constant="41.5" id="BEz-Ze-xdP"/>
                             <constraint firstItem="9gd-Yq-J23" firstAttribute="leading" secondItem="sMK-vd-ODN" secondAttribute="leading" constant="20" id="C1F-9x-rX8"/>
                             <constraint firstItem="rip-jx-xaM" firstAttribute="top" secondItem="IAP-Fr-Zfg" secondAttribute="bottom" constant="8" id="EAA-ME-YNd"/>
                             <constraint firstItem="7ht-Kf-6tS" firstAttribute="top" secondItem="qHT-4m-2xo" secondAttribute="bottom" constant="34" id="EB3-dd-Upj"/>
                             <constraint firstItem="IAP-Fr-Zfg" firstAttribute="top" secondItem="ffs-Zc-uRQ" secondAttribute="bottom" id="EGo-bz-qLU"/>
-                            <constraint firstItem="ffs-Zc-uRQ" firstAttribute="centerX" secondItem="pwn-bK-VWs" secondAttribute="centerX" constant="-45" id="NjJ-6q-wr7"/>
                             <constraint firstItem="r1K-HN-7cH" firstAttribute="centerX" secondItem="pwn-bK-VWs" secondAttribute="centerX" id="OhI-Y2-jvT"/>
-                            <constraint firstItem="sMK-vd-ODN" firstAttribute="trailing" secondItem="9gd-Yq-J23" secondAttribute="trailing" constant="70" id="P23-dS-PLU"/>
+                            <constraint firstItem="sMK-vd-ODN" firstAttribute="trailing" secondItem="7ht-Kf-6tS" secondAttribute="trailing" constant="16.5" id="PBU-hR-Fun"/>
+                            <constraint firstItem="sMK-vd-ODN" firstAttribute="trailing" secondItem="PIH-1v-70O" secondAttribute="trailing" constant="16.5" id="PfU-Kb-BGg"/>
                             <constraint firstItem="PxF-65-q6W" firstAttribute="top" secondItem="8BL-bh-GdV" secondAttribute="bottom" constant="16" id="Rhm-nF-JT9"/>
                             <constraint firstItem="6bD-Iz-FaV" firstAttribute="bottom" secondItem="sMK-vd-ODN" secondAttribute="bottom" constant="9" id="TLe-zM-lq6"/>
                             <constraint firstItem="r1K-HN-7cH" firstAttribute="top" secondItem="8BL-bh-GdV" secondAttribute="bottom" constant="16" id="Vmw-iU-G7b"/>
                             <constraint firstItem="PxF-65-q6W" firstAttribute="leading" secondItem="sMK-vd-ODN" secondAttribute="leading" constant="20" id="XPV-9x-lhj"/>
-                            <constraint firstItem="8fD-vR-qNA" firstAttribute="top" secondItem="7ht-Kf-6tS" secondAttribute="bottom" constant="16" id="Ydd-1W-tPb"/>
+                            <constraint firstItem="PIH-1v-70O" firstAttribute="leading" secondItem="ffs-Zc-uRQ" secondAttribute="trailing" constant="8" id="XSI-fV-sVt"/>
+                            <constraint firstItem="sMK-vd-ODN" firstAttribute="trailing" secondItem="rip-jx-xaM" secondAttribute="trailing" constant="20" id="XT2-T4-sag"/>
+                            <constraint firstItem="PIH-1v-70O" firstAttribute="top" secondItem="7ht-Kf-6tS" secondAttribute="bottom" constant="8" id="Z84-sp-Q3T"/>
                             <constraint firstItem="8BL-bh-GdV" firstAttribute="top" secondItem="sMK-vd-ODN" secondAttribute="top" id="cs1-l5-Rxr"/>
                             <constraint firstItem="ffs-Zc-uRQ" firstAttribute="top" secondItem="r1K-HN-7cH" secondAttribute="bottom" constant="8" id="efd-MG-fV4"/>
                             <constraint firstItem="7ht-Kf-6tS" firstAttribute="leading" secondItem="ffs-Zc-uRQ" secondAttribute="trailing" constant="8" id="ftD-9l-kLe"/>
@@ -239,6 +258,7 @@
                     </view>
                     <connections>
                         <outlet property="textField" destination="v3g-pe-i6L" id="5f0-ve-n8h"/>
+                        <outlet property="vcLabel" destination="wTH-5b-mBo" id="UtG-nV-g0N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qwt-Kb-7Pb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

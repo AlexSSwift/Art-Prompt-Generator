@@ -9,7 +9,7 @@
 import UIKit
 
 class GeneratedPromptVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    
     @IBOutlet weak var tableView: UITableView!
     var selectedCategories: [String] = []
     
@@ -19,7 +19,7 @@ class GeneratedPromptVC: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.dataSource = self
         
     }
-   
+    
     func generatePrompt() -> [String] {
         var buffer:[String] = []
         for category in selectedCategories {
@@ -35,9 +35,9 @@ class GeneratedPromptVC: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedCategories.count
-     }
-     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
         let prompt = generatePrompt()
         if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: "cell") {
@@ -49,9 +49,32 @@ class GeneratedPromptVC: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.textLabel?.text = selectedCategories[indexPath.row]
         cell.detailTextLabel?.text = prompt[indexPath.row]
         return cell
-     }
-     
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let reroll = UIContextualAction(style: .normal, title: "Reroll") { (action, view, complete) in
+            let cell = tableView.cellForRow(at: indexPath)
+            let thisCategory = promptData.data[self.selectedCategories[indexPath.row]]
+            let newRandomPrompt = thisCategory?.shuffled()
+            cell?.detailTextLabel?.text = newRandomPrompt?.first
+            complete(true)
+        }
+        return UISwipeActionsConfiguration(actions: [reroll])
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let reroll = UIContextualAction(style: .normal, title: "Reroll") { (action, view, complete) in
+            let cell = tableView.cellForRow(at: indexPath)
+            let thisCategory = promptData.data[self.selectedCategories[indexPath.row]]
+            let newRandomPrompt = thisCategory?.shuffled()
+            cell?.detailTextLabel?.text = newRandomPrompt?.first
+            complete(true)
+        }
+        return UISwipeActionsConfiguration(actions: [reroll])
+    }
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
+        selectedCategories = []
         self.dismiss(animated: true, completion: nil)
     }
     
