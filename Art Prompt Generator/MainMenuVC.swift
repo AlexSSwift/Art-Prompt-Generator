@@ -137,26 +137,28 @@ class MainMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, complete) in
             let cell = tableView.cellForRow(at: indexPath)
-            let thisCategory = promptData.categories[indexPath.section]
-            let prompts = promptData.data[thisCategory]
-            let thisPrompt = prompts?[indexPath.row - 1]
-            if thisPrompt != nil {
-                let storyboard = UIStoryboard(name: "CreatPrompt", bundle: nil)
-                let newPromptTypeVC = storyboard.instantiateViewController(withIdentifier: "NewPromptTypeVC") as! NewPromptTypeVC
-                //newPromptTypeVC.modalPresentationStyle = .fullScreen
-                newPromptTypeVC.stringToEdit = thisPrompt!
-                newPromptTypeVC.task = .editPrompt
-                
-                self.present(newPromptTypeVC, animated: true, completion: nil)
-                
-                newPromptTypeVC.newTypeClosure = {
-                    let prompt = $0
-                    promptData.data[thisCategory]?.insert(prompt, at: indexPath.row - 1)
-                    promptData.data[thisCategory]?.remove(at: indexPath.row)
-                    cell?.textLabel?.text = prompt
+            if indexPath.row != 0 {
+                let thisCategory = promptData.categories[indexPath.section]
+                let prompts = promptData.data[thisCategory]
+                let thisPrompt = prompts?[indexPath.row - 1]
+                if thisPrompt != nil {
+                    let storyboard = UIStoryboard(name: "CreatPrompt", bundle: nil)
+                    let newPromptTypeVC = storyboard.instantiateViewController(withIdentifier: "NewPromptTypeVC") as! NewPromptTypeVC
+                    //newPromptTypeVC.modalPresentationStyle = .fullScreen
+                    newPromptTypeVC.stringToEdit = thisPrompt!
+                    newPromptTypeVC.task = .editPrompt
+                    
+                    self.present(newPromptTypeVC, animated: true, completion: nil)
+                    
+                    newPromptTypeVC.newTypeClosure = {
+                        let prompt = $0
+                        promptData.data[thisCategory]?.insert(prompt, at: indexPath.row - 1)
+                        promptData.data[thisCategory]?.remove(at: indexPath.row)
+                        cell?.textLabel?.text = prompt
+                    }
+                    
+                    complete(true)
                 }
-                
-                complete(true)
             }
         }
         return UISwipeActionsConfiguration(actions: [edit])

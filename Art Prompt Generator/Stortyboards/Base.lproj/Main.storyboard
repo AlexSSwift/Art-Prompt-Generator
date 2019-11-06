@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -196,15 +196,28 @@
                                     <action selector="backButtonPressed:" destination="UEv-bq-YmX" eventType="touchUpInside" id="gbJ-dH-okK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMK-ge-mzf">
+                                <rect key="frame" x="325" y="90" width="89" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9tn-sc-52C"/>
+                                    <constraint firstAttribute="width" constant="89" id="lp4-PM-W81"/>
+                                </constraints>
+                                <state key="normal" title="Reroll All"/>
+                                <connections>
+                                    <action selector="rerollAll:" destination="UEv-bq-YmX" eventType="touchUpInside" id="e7B-gV-ylG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Y7-Aq-xuD" firstAttribute="leading" secondItem="KkR-vb-dSN" secondAttribute="leading" id="3t3-Wc-UAK"/>
                             <constraint firstItem="wNK-OD-hm6" firstAttribute="top" secondItem="KkR-vb-dSN" secondAttribute="top" constant="8" id="B1k-FM-BaW"/>
                             <constraint firstItem="6Y7-Aq-xuD" firstAttribute="top" secondItem="160-mt-j3e" secondAttribute="bottom" constant="5.5" id="DTQ-Q5-ebE"/>
+                            <constraint firstItem="GMK-ge-mzf" firstAttribute="top" secondItem="wNK-OD-hm6" secondAttribute="bottom" constant="8" id="Enh-NX-FfJ"/>
                             <constraint firstItem="160-mt-j3e" firstAttribute="leading" secondItem="KkR-vb-dSN" secondAttribute="leading" id="ODA-AX-nmN"/>
                             <constraint firstItem="wNK-OD-hm6" firstAttribute="leading" secondItem="KkR-vb-dSN" secondAttribute="leading" id="Zez-UP-IDz"/>
                             <constraint firstItem="160-mt-j3e" firstAttribute="top" secondItem="wNK-OD-hm6" secondAttribute="bottom" constant="8" id="aab-HD-4in"/>
+                            <constraint firstItem="KkR-vb-dSN" firstAttribute="trailing" secondItem="GMK-ge-mzf" secondAttribute="trailing" id="afr-bz-qb2"/>
                             <constraint firstItem="KkR-vb-dSN" firstAttribute="trailing" secondItem="6Y7-Aq-xuD" secondAttribute="trailing" id="lNc-V4-qNe"/>
                             <constraint firstItem="KkR-vb-dSN" firstAttribute="trailing" secondItem="wNK-OD-hm6" secondAttribute="trailing" id="qox-23-IrQ"/>
                             <constraint firstItem="KkR-vb-dSN" firstAttribute="bottom" secondItem="6Y7-Aq-xuD" secondAttribute="bottom" constant="30" id="sEE-ME-bi9"/>

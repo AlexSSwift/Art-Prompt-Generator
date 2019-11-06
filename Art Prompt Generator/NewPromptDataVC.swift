@@ -104,21 +104,24 @@ class NewPromptDataVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     }
     
     @IBAction func editCategoryButtonPressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "CreatPrompt", bundle: nil)
-        let newPromptTypeVC = storyboard.instantiateViewController(withIdentifier: "NewPromptTypeVC") as! NewPromptTypeVC
-        //newPromptTypeVC.modalPresentationStyle = .fullScreen
-        newPromptTypeVC.task = .editCategory
-        newPromptTypeVC.stringToEdit = promptData.categories[currentCatagory]
-        
-        self.present(newPromptTypeVC, animated: true, completion: nil)
-        
-        newPromptTypeVC.newTypeClosure = {
-            promptData.editDataCategory(which: self.currentCatagory, newCategoryName: $0)
-            self.typePicker.reloadAllComponents()
+        if promptData.categories != [] {
+            let storyboard = UIStoryboard(name: "CreatPrompt", bundle: nil)
+            let newPromptTypeVC = storyboard.instantiateViewController(withIdentifier: "NewPromptTypeVC") as! NewPromptTypeVC
+            //newPromptTypeVC.modalPresentationStyle = .fullScreen
+            newPromptTypeVC.task = .editCategory
+            newPromptTypeVC.stringToEdit = promptData.categories[currentCatagory]
+            
+            self.present(newPromptTypeVC, animated: true, completion: nil)
+            
+            newPromptTypeVC.newTypeClosure = {
+                promptData.editDataCategory(which: self.currentCatagory, newCategoryName: $0)
+                self.typePicker.reloadAllComponents()
+                //            } else {
+                //                //error: there is no catigory
+                //            }
+            }
         }
-        
     }
-    
     
     @IBAction func deleteCategoryPressed(_ sender: UIButton) {
         let deleteAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this category and it's contents?", preferredStyle: .alert)
